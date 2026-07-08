@@ -1,24 +1,19 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
+
 import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
-  title: "Morotech",
-  description: "Seja bem-vindo ao Morotech",
+  title: "Moro | Tecnologia pensada para o seu negócio",
+  description:
+    "Sites, lojas e sistemas sob medida — com SEO, automação e IA para sua empresa vender mais.",
 };
 
 export default function RootLayout({
@@ -29,9 +24,11 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
+      className={cn("h-full", "antialiased", "dark", manrope.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#020202] text-white selection:bg-[#2563EB] selection:text-white">
+        {children}
+      </body>
     </html>
   );
 }
