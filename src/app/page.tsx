@@ -15,9 +15,16 @@ export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-hidden bg-[#020202] text-white">
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full bg-cover bg-right bg-no-repeat md:bg-right"
+        className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full bg-cover bg-right bg-no-repeat max-sm:hidden md:bg-right"
         style={{
           backgroundImage: "url('/hero-background.png')",
+        }}
+      />
+
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full bg-cover bg-right bg-no-repeat sm:hidden md:bg-right"
+        style={{
+          backgroundImage: "url('/hero-background-mobile.png')",
         }}
       />
 
@@ -36,7 +43,7 @@ export default function Home() {
               <Image
                 src={MoroLogo}
                 alt="Moro Logo"
-                className="mt-4 h-[130px] w-auto"
+                className="h-[30px] w-auto"
                 priority
               />
             </a>
@@ -99,7 +106,7 @@ export default function Home() {
 
       {/* Hero Content Section */}
       <main className="relative z-10 flex w-full flex-grow items-center">
-        <div className="mx-auto flex w-full max-w-[100rem] flex-col justify-center px-6 pt-12 pb-24 md:px-12 md:py-28 lg:px-20">
+        <div className="mx-auto flex w-full max-w-[100rem] flex-col justify-center px-6 pt-24 pb-24 max-sm:pb-12 md:px-12 md:py-28 lg:px-20">
           {/* Badge */}
           <BlurFade direction="up">
             <div className="mb-8 flex w-fit items-center gap-2.5 rounded-full border border-[#FFFFFF]/[0.08] bg-[#FFFFFF]/[0.05] py-1.5 pr-3.5 pl-2 backdrop-blur-lg select-none">
@@ -115,7 +122,7 @@ export default function Home() {
           {/* H1 Heading */}
           <DiaTextReveal
             as="h1"
-            className="font-heading text-6xl leading-[1.12] font-bold tracking-[-4.5%] text-white sm:text-6xl md:text-7xl lg:text-[80px]"
+            className="font-heading text-5xl leading-[1.12] font-bold tracking-[-4.5%] text-white sm:text-6xl md:text-7xl lg:text-[80px]"
             colors={["#fff", "#2563EB", "#3B82F6", "#60A5FA", "#38BDF8"]}
             duration={1.5}
             startOnView={true}
@@ -139,7 +146,7 @@ export default function Home() {
 
           <TextAnimate
             as="p"
-            className="mt-8 max-w-[500px] font-sans text-lg leading-[1.6] font-normal text-white/75 md:text-[18px]"
+            className="mt-8 max-w-[500px] font-sans text-base leading-[1.6] font-normal text-white/75 sm:text-lg md:text-[18px]"
             animation="blurInUp"
             delay={0.8}
           >
