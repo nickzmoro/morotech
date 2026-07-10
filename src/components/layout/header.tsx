@@ -29,7 +29,7 @@ export default function Header() {
       className={cn(
         "fixed left-1/2 z-20 mx-auto w-full -translate-x-1/2 transition-all duration-300 ease-in-out",
         isScrolled
-          ? "top-2 max-w-[calc(100%-2rem)] rounded-full border border-white/5 bg-black/10 backdrop-blur-lg backdrop-saturate-0 xl:max-w-[100rem]"
+          ? "top-0 max-w-[100rem] border border-white/5 bg-black/10 backdrop-blur-lg backdrop-saturate-0 md:top-2 md:rounded-full"
           : "top-0 max-w-[100rem] rounded-none border border-transparent bg-transparent backdrop-blur-none",
       )}
     >
