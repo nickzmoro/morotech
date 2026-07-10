@@ -2,11 +2,11 @@ import Image from "next/image";
 
 import WhatsAppIcon from "@/assets/icons/whatsapp-icon.svg";
 
+import Badge from "../ui/badge";
 import { BlurFade } from "../ui/blur-fade";
 import { DiaTextReveal } from "../ui/dia-text-reveal";
 import { GlareHover } from "../ui/glare-hover";
 import { TextAnimate } from "../ui/text-animate";
-import Badge from "./badge";
 
 export default function Hero() {
   return (

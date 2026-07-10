@@ -1,7 +1,7 @@
 "use client";
 
-import Header from "@/components/common/header";
-import Hero from "@/components/common/hero";
+import Header from "@/components/layout/header";
+import Hero from "@/components/sections/hero";
 import { BlurFade } from "@/components/ui/blur-fade";
 
 export default function Home() {

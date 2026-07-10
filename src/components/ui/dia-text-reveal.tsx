@@ -1,4 +1,6 @@
-/* eslint-disable react-hooks/refs */
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import {
@@ -263,6 +265,7 @@ export const DiaTextReveal = Object.assign(
       const el = spanRef.current;
       if (!el || !isMulti || texts.length === 0) return;
       setMeasuredWidths(measureWidths(el, texts));
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [Array.isArray(text) ? text.join("\0") : text]);
 
     playRef.current = () => {

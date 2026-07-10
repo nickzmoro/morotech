@@ -26,7 +26,7 @@ export default function RootLayout({
       lang="pt-br"
       className={cn("h-full", "antialiased", "dark", manrope.variable)}
     >
-      <body className="min-h-full flex flex-col bg-[#020202] text-white selection:bg-[#2563EB] selection:text-white">
+      <body className="bg-site-bg flex min-h-full flex-col text-white selection:bg-[#2563EB] selection:text-white">
         {children}
       </body>
     </html>
