@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/sections/about";
 import Hero from "@/components/sections/hero";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
         {/* Hero Content Section */}
         <Hero />
       </div>
-      <div>Olá!</div>
+      <About />
     </>
   );
 }
