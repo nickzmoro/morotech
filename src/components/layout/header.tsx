@@ -1,16 +1,45 @@
+"use client";
+
 import MoroLogo from "@public/logo.svg";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import WhatsAppIcon from "@/assets/icons/whatsapp-icon.svg";
+import { cn } from "@/lib/utils";
 
 import { BlurFade } from "../ui/blur-fade";
 import { GlareHover } from "../ui/glare-hover";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <BlurFade delay={1.5} className="z-20">
-      <header className="fixed top-0 z-20 w-full">
-        <div className="mx-auto flex h-24 max-w-[100rem] items-center justify-between px-6 md:px-12 lg:px-20">
+    <BlurFade
+      delay={1.5}
+      className={cn(
+        "fixed left-1/2 z-20 mx-auto w-full -translate-x-1/2 transition-all duration-300 ease-in-out",
+        isScrolled
+          ? "top-2 max-w-[calc(100%-2rem)] rounded-full border border-white/5 bg-black/10 backdrop-blur-lg backdrop-saturate-0 xl:max-w-[100rem]"
+          : "top-0 max-w-[100rem] rounded-none border border-transparent bg-transparent backdrop-blur-none",
+      )}
+    >
+      <header className="">
+        <div
+          className={cn(
+            "mx-auto flex max-w-[100rem] items-center justify-between px-6 transition-all duration-300 ease-in-out md:px-12 lg:px-20",
+            isScrolled ? "h-18 md:h-20" : "h-22 md:h-24",
+          )}
+        >
           {/* Logo */}
           <a
             href="#"
@@ -38,7 +67,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#sobre"
                   className="font-sans text-base font-medium tracking-wide text-white/70 transition-colors hover:text-white"
                 >
                   Sobre

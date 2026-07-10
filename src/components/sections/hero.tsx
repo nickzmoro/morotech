@@ -62,6 +62,8 @@ export default function Hero() {
             className="mt-8 max-w-[500px] font-sans text-base leading-[1.6] font-normal text-white/75 sm:text-lg md:text-[18px]"
             animation="blurInUp"
             delay={0.8}
+            startOnView
+            once
           >
             Sites, lojas e sistemas sob medida — com SEO, automação e IA para
             sua empresa vender mais.
