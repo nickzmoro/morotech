@@ -16,6 +16,7 @@ export default function Home() {
         {/* Hero Content Section */}
         <Hero />
       </div>
+      <div>Olá!</div>
     </>
   );
 }

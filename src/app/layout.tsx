@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
+import FloatingWhatsApp from "@/components/ui/floating-whatsapp";
 import { cn } from "@/lib/utils";
 
 const manrope = Manrope({
@@ -28,6 +29,9 @@ export default function RootLayout({
     >
       <body className="bg-site-bg flex min-h-full flex-col text-white selection:bg-[#2563EB] selection:text-white">
         {children}
+
+        {/* WhatsApp Icon */}
+        <FloatingWhatsApp message="Olá! Vi o site de vocês e gostaria de conversar sobre um projeto." />
       </body>
     </html>
   );
