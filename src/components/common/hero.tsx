@@ -55,7 +55,9 @@ export default function Hero() {
           <div className="mt-10">
             <GlareHover className="rounded-full">
               <a
-                href="https://wa.me/5514991459254"
+                href={`https://wa.me/5514991459254?text=${encodeURIComponent(
+                  "Olá! Vi o site de vocês e gostaria de solicitar um orçamento.",
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 rounded-full border border-white/50 bg-[#2563EB] px-8 py-4 text-base font-semibold tracking-[-1.5%] text-white shadow-[0_0_20px_rgba(256,256,256,0.25)] transition-all duration-300 md:text-[17px]"

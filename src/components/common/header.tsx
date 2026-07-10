@@ -73,7 +73,9 @@ export default function Header() {
         <div>
           <GlareHover className="rounded-full">
             <a
-              href="https://wa.me/5514991459254"
+              href={`https://wa.me/5514991459254?text=${encodeURIComponent(
+                "Olá! Vi o site de vocês e gostaria de conversar sobre um projeto.",
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-heading flex items-center gap-2 rounded-full bg-[#2563EB] px-6.5 py-3 text-base font-semibold tracking-[-1.5%] text-white transition-all duration-200 hover:bg-blue-700"
