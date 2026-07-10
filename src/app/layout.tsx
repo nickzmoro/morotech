@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
 import Header from "@/components/layout/header";
-import { BlurFade } from "@/components/ui/blur-fade";
 import FloatingWhatsApp from "@/components/ui/floating-whatsapp";
 import { cn } from "@/lib/utils";
 
@@ -31,9 +30,7 @@ export default function RootLayout({
     >
       <body className="bg-site-bg flex min-h-full flex-col text-white selection:bg-[#2563EB] selection:text-white">
         {/* Header / Navigation Bar */}
-        <BlurFade delay={1.5} className="z-20">
-          <Header />
-        </BlurFade>
+        <Header />
 
         {children}
 

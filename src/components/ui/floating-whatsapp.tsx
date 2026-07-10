@@ -2,13 +2,15 @@ import Image from "next/image";
 
 import WhatsAppIcon from "@/assets/icons/whatsapp-icon.svg";
 
+import { BlurFade } from "./blur-fade";
+
 interface FloatingWhatsAppProps {
   message: string;
 }
 
 export default function FloatingWhatsApp({ message }: FloatingWhatsAppProps) {
   return (
-    <div className="fixed right-6 bottom-6 z-50">
+    <BlurFade delay={1.5} className="fixed right-6 bottom-6 z-50">
       <a
         href={`https://wa.me/5514991459254?text=${encodeURIComponent(message)}`}
         target="_blank"
@@ -18,6 +20,6 @@ export default function FloatingWhatsApp({ message }: FloatingWhatsAppProps) {
       >
         <Image src={WhatsAppIcon} alt="WhatsApp" className="h-7 w-7" />
       </a>
-    </div>
+    </BlurFade>
   );
 }
