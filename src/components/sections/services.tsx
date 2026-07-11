@@ -97,9 +97,9 @@ export default function Services() {
       >
         <div className="mx-auto w-full max-w-[100rem]">
           {/* Section Title */}
-          <div className="flex justify-center max-sm:mb-10">
+          <div className="z-10 flex justify-center max-sm:mb-10">
             <BlurFade inView direction="up" delay={0.1}>
-              <h2 className="font-heading from-site-bg bg-linear-to-t to-white bg-clip-text text-center text-7xl leading-none font-light tracking-wider text-transparent uppercase md:text-8xl lg:text-9xl">
+              <h2 className="font-heading from-site-bg bg-linear-to-t to-white bg-clip-text text-center text-6xl leading-none font-light tracking-wider text-transparent uppercase md:text-8xl lg:text-9xl">
                 SERVICOS
               </h2>
             </BlurFade>
@@ -175,7 +175,7 @@ export default function Services() {
               inView
               direction="up"
               delay={0.4}
-              className="order-6 flex h-[160px] items-center justify-center rounded-[32px] p-6 max-sm:order-8 md:col-span-2 md:h-[380px]"
+              className="order-6 flex h-[160px] items-center justify-center rounded-[32px] p-6 max-sm:order-0 md:col-span-2 md:h-[380px]"
             >
               <div className="relative flex h-full w-full max-w-[500px] items-center justify-center">
                 <Image
