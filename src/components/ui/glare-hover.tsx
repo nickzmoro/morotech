@@ -128,19 +128,19 @@ function GlareHover({
       className={cn(
         "relative grid size-fit cursor-pointer place-items-center overflow-hidden bg-transparent",
         // BEFORE ELEMENT
-        "before:pointer-events-none before:absolute before:inset-0 before:z-10 before:bg-no-repeat before:content-['']",
+        "md:before:pointer-events-none md:before:absolute md:before:inset-0 md:before:z-10 md:before:bg-no-repeat md:before:content-['']",
         // GRADIENT
-        "before:bg-[linear-gradient(var(--gh-angle),transparent_60%,var(--gh-rgba)_70%,transparent,transparent_100%)]",
+        "md:before:bg-[linear-gradient(var(--gh-angle),transparent_60%,var(--gh-rgba)_70%,transparent,transparent_100%)]",
         // SIZE + POSITION
-        "before:bg-size-[var(--gh-size)_var(--gh-size),100%_100%]",
-        "before:bg-position-[-100%_-100%,0_0]",
+        "md:before:bg-size-[var(--gh-size)_var(--gh-size),100%_100%]",
+        "md:before:bg-position-[-100%_-100%,0_0]",
         // TRANSITION
         !playOnce &&
-          "before:transition-[background-position] before:duration-(--gh-duration) before:ease-in-out",
+          "md:before:transition-[background-position] md:before:duration-(--gh-duration) md:before:ease-in-out",
         playOnce &&
-          "before:transition-none hover:before:transition-[background-position] hover:before:duration-(--gh-duration)",
+          "md:before:transition-none md:hover:before:transition-[background-position] md:hover:before:duration-(--gh-duration)",
         // HOVER EFFECT
-        "hover:before:bg-position-[100%_100%,0_0]",
+        "md:hover:before:bg-position-[100%_100%,0_0]",
         className,
       )}
       style={cssVars}
