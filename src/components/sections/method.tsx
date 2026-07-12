@@ -135,14 +135,14 @@ export default function Method() {
       <div
         className="pointer-events-none absolute inset-0 z-0 h-full w-full bg-cover bg-center bg-no-repeat max-sm:hidden md:bg-size-[100%_100%]"
         style={{
-          backgroundImage: "url('/method-background.png')",
+          backgroundImage: "url('/method-background.webp')",
         }}
       />
 
       <div
         className="pointer-events-none absolute inset-0 z-0 h-full w-full bg-cover bg-center bg-no-repeat max-sm:block md:hidden"
         style={{
-          backgroundImage: "url('/method-background-mobile.png')",
+          backgroundImage: "url('/method-background-mobile.webp')",
         }}
       />
 

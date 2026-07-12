@@ -1,14 +1,14 @@
 "use client";
 
-import AboutImage from "@public/about-image.png";
+import AboutImage from "@public/about-image.webp";
 import Image from "next/image";
 
-import DolcciB from "@/assets/carousel/dolcci-b.png";
-import GLine from "@/assets/carousel/g-line.png";
-import HdInox from "@/assets/carousel/hd-inox.png";
-import MaqSoft from "@/assets/carousel/maq-soft.png";
-import Markvora from "@/assets/carousel/markvora.png";
-import N2Commerce from "@/assets/carousel/n2commerce.png";
+import DolcciB from "@/assets/carousel/dolcci-b.webp";
+import GLine from "@/assets/carousel/g-line.webp";
+import HdInox from "@/assets/carousel/hd-inox.webp";
+import MaqSoft from "@/assets/carousel/maq-soft.webp";
+import Markvora from "@/assets/carousel/markvora.webp";
+import N2Commerce from "@/assets/carousel/n2commerce.webp";
 import WhatsAppIcon from "@/assets/icons/whatsapp-icon.svg";
 
 import Badge from "../ui/badge";
