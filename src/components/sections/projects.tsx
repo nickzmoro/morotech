@@ -6,7 +6,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image, { StaticImageData } from "next/image";
 import { useRef, useState } from "react";
 
-import N2CommerceImage from "@/assets/projects/n2commerce.png";
+import DolcciBImage from "@/assets/projects/dolcci-b.webp";
+import GLineImage from "@/assets/projects/g-line.webp";
+import HdInoxImage from "@/assets/projects/hd-inox.webp";
+import MaqSoftImage from "@/assets/projects/maq-soft.webp";
+import MarkvoraImage from "@/assets/projects/markvora.webp";
+import N2CommerceImage from "@/assets/projects/n2commerce.webp";
+import SignalAiImage from "@/assets/projects/signal-ai.webp";
 
 import Badge from "../ui/badge";
 import { BlurFade } from "../ui/blur-fade";
@@ -43,92 +49,109 @@ const projects: Project[] = [
     service: "Landing Page",
     objective: "Gerar mais vendas",
     image: N2CommerceImage,
-    link: "https://n2commerce.com.br",
+    link: "https://n2commercee.vercel.app/",
+  },
+  {
+    id: "signal-ai",
+    badgeText: "Website",
+    title: "Signal AI",
+    description:
+      "Plataforma de prospecção inteligente criada para transformar visitantes em oportunidades de negócio através da automação e IA.",
+    bullets: [
+      "Captação inteligente de leads",
+      "Gerador de Pitch com IA",
+      "Qualificação automática de leads",
+      "Automação do processo de vendas",
+    ],
+    service: "Sistema sob Medida + IA",
+    objective: "Prospecção inteligente de leads",
+    image: SignalAiImage,
+    link: "https://mapconnect-ai.nicolasmororuiz.workers.dev/",
+  },
+  {
+    id: "hd-inox",
+    badgeText: "Loja Online",
+    title: "HD Inox",
+    description:
+      "E-commerce completo, uma plataforma própria de vendas com experiência premium, gestão centralizada e recursos inteligentes.",
+    bullets: [
+      "Assistente virtual com IA",
+      "Painel administrativo completo",
+      "Gateway de pagamento integrado",
+      "Design exclusivo para a marca",
+    ],
+    service: "Loja Online + IA",
+    objective: "Aumentar vendas e fidelizar clientes",
+    image: HdInoxImage,
+    link: "https://hdinox.n2commerce.com.br",
+  },
+  {
+    id: "markvora",
+    badgeText: "Landing Page",
+    title: "Markvora",
+    description:
+      "Landing page criada para fortalecer a presença digital da Markvora e transmitir inovação por meio de uma experiência moderna e interativa.",
+    bullets: [
+      "Experiência visual interativa",
+      "Visual premium e tecnológico",
+      "Estrutura focada em conversão",
+      "Identidade digital exclusiva",
+    ],
+    service: "Landing Page",
+    objective: "Atrair leads qualificados",
+    image: MarkvoraImage,
+    link: "https://markvora.vercel.app/",
+  },
+  {
+    id: "g-line",
+    badgeText: "Loja Online",
+    title: "G-Line",
+    description:
+      "E-commerce criado para impulsionar as vendas através de uma experiência digital personalizada, com automação, IA e gerenciamento completo.",
+    bullets: [
+      "Busca inteligente com IA",
+      "Controle completo da operação",
+      "Checkout integrado e seguro",
+      "Interface exclusiva da marca",
+    ],
+    service: "Loja Online",
+    objective: "Aumentar vendas e fidelizar clientes",
+    image: GLineImage,
+    link: "https://gline.n2commerce.com.br",
+  },
+  {
+    id: "maq-soft",
+    badgeText: "Loja Online via WhatsApp",
+    title: "Maq Soft",
+    description:
+      "Loja desenvolvida para modernizar a presença digital da sorveteria, facilitando a divulgação dos produtos e o processo de pedidos online.",
+    bullets: [
+      "Integração direta com WhatsApp",
+      "Cardápio digital interativo",
+      "Interface leve, moderna e responsiva",
+      "Jornada focada em conversão",
+    ],
+    service: "Loja Online via WhatsApp",
+    objective: "Aumentar vendas e fidelizar clientes",
+    image: MaqSoftImage,
+    link: "https://maq-soft.vercel.app/",
   },
   {
     id: "dolcci-b",
-    badgeText: "E-commerce",
+    badgeText: "Link Bio",
     title: "Dolcci B",
     description:
-      "E-commerce premium de doces gourmet com painel de vendas e checkout de alta conversão integrado.",
+      "Link Bio desenvolvido para centralizar o catálogo e pedidos via WhatsApp e fortalecer a presença digital da marca.",
     bullets: [
-      "Checkout transparente integrado",
-      "Painel administrativo personalizado",
-      "Design sofisticado e atraente",
-      "Gestão automática de estoque",
+      "Integração direta com WhatsApp",
+      "Navegação simples e intuitiva",
+      "Experiência otimizada para mobile",
+      "Catálogo organizado de produtos",
     ],
-    service: "E-commerce",
-    objective: "Vender online",
-    image: N2CommerceImage,
-    link: "https://dolccib.com.br",
-  },
-  {
-    id: "markvora",
-    badgeText: "Website",
-    title: "Markvora",
-    description:
-      "Site institucional dinâmico para agência de marketing, focado em atração de novos leads e autoridade no mercado.",
-    bullets: [
-      "Design futurista e dinâmico",
-      "Carregamento em milissegundos",
-      "Blog otimizado para SEO",
-      "Captura inteligente de contatos",
-    ],
-    service: "Website Institucional",
-    objective: "Atrair leads qualificados",
-    image: N2CommerceImage,
-    link: "https://markvora.com.br",
-  },
-  {
-    id: "markvora",
-    badgeText: "Website",
-    title: "Markvora",
-    description:
-      "Site institucional dinâmico para agência de marketing, focado em atração de novos leads e autoridade no mercado.",
-    bullets: [
-      "Design futurista e dinâmico",
-      "Carregamento em milissegundos",
-      "Blog otimizado para SEO",
-      "Captura inteligente de contatos",
-    ],
-    service: "Website Institucional",
-    objective: "Atrair leads qualificados",
-    image: N2CommerceImage,
-    link: "https://markvora.com.br",
-  },
-  {
-    id: "markvora",
-    badgeText: "Website",
-    title: "Markvora",
-    description:
-      "Site institucional dinâmico para agência de marketing, focado em atração de novos leads e autoridade no mercado.",
-    bullets: [
-      "Design futurista e dinâmico",
-      "Carregamento em milissegundos",
-      "Blog otimizado para SEO",
-      "Captura inteligente de contatos",
-    ],
-    service: "Website Institucional",
-    objective: "Atrair leads qualificados",
-    image: N2CommerceImage,
-    link: "https://markvora.com.br",
-  },
-  {
-    id: "markvora",
-    badgeText: "Website",
-    title: "Markvora",
-    description:
-      "Site institucional dinâmico para agência de marketing, focado em atração de novos leads e autoridade no mercado.",
-    bullets: [
-      "Design futurista e dinâmico",
-      "Carregamento em milissegundos",
-      "Blog otimizado para SEO",
-      "Captura inteligente de contatos",
-    ],
-    service: "Website Institucional",
-    objective: "Atrair leads qualificados",
-    image: N2CommerceImage,
-    link: "https://markvora.com.br",
+    service: "Link Bio",
+    objective: "Centralizar vendas via WhatsApp",
+    image: DolcciBImage,
+    link: "https://dolccib.netlify.app/",
   },
 ];
 
@@ -221,7 +244,7 @@ export default function Projects() {
     <section
       ref={containerRef}
       id="projetos"
-      className="bg-site-bg relative w-full text-white"
+      className="bg-site-bg relative w-full text-white md:mt-20"
     >
       {/* Title block - sticky for desktop, normal flow for mobile */}
       <div className="pointer-events-none sticky top-12 z-0 flex w-full justify-center pt-16 max-sm:relative max-sm:top-0 max-sm:pt-24 max-sm:pb-8">
@@ -276,6 +299,7 @@ export default function Projects() {
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-102"
                   priority={index === 0}
                   sizes="(max-width: 1024px) 100vw, 60vw"
+                  quality={100}
                 />
               </div>
 
