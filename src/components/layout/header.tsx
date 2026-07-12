@@ -29,7 +29,7 @@ export default function Header() {
       className={cn(
         "fixed left-1/2 z-20 mx-auto w-full -translate-x-1/2 transition-all duration-300 ease-in-out",
         isScrolled
-          ? "top-0 max-w-[100rem] border border-white/5 bg-black/10 backdrop-blur-lg md:top-2 md:rounded-full"
+          ? "top-0 max-w-[100rem] border-b border-b-white/5 bg-black/10 backdrop-blur-lg md:top-2 md:rounded-full md:border md:border-white/5"
           : "top-0 max-w-[100rem] rounded-none border border-transparent bg-transparent backdrop-blur-none",
       )}
     >
@@ -49,7 +49,7 @@ export default function Header() {
             <Image
               src={MoroLogo}
               alt="Moro Logo"
-              className="h-[30px] w-auto"
+              className="h-[24px] w-auto md:h-[30px]"
               priority
             />
           </a>
@@ -109,7 +109,7 @@ export default function Header() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-heading flex items-center gap-2 rounded-full bg-[#2563EB] px-6.5 py-3 text-base font-semibold tracking-[-1.5%] text-white transition-all duration-200 hover:bg-blue-700"
+                className="font-heading flex items-center gap-2 rounded-full bg-[#2563EB] px-6.5 py-3 text-sm font-semibold tracking-[-1.5%] text-white transition-all duration-200 hover:bg-blue-700 md:text-base"
               >
                 Fale comigo
                 <Image src={WhatsAppIcon} alt="WhatsApp" className="h-5 w-5" />

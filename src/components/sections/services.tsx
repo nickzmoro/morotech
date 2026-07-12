@@ -93,7 +93,7 @@ export default function Services() {
         beamSize={4}
         perspective={150}
         gridColor="rgba(255, 255, 255, 0.03)"
-        className="w-full rounded-none border-none bg-transparent p-0 px-6 py-24 md:mask-[linear-gradient(to_bottom,transparent,white_15%,white_85%,transparent)] md:px-12 lg:px-20"
+        className="w-full rounded-none border-none bg-transparent p-0 px-4 py-24 md:mask-[linear-gradient(to_bottom,transparent,white_15%,white_85%,transparent)] md:px-12 lg:px-20"
       >
         <div className="mx-auto w-full max-w-[100rem]">
           {/* Section Title */}

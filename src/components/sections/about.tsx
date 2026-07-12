@@ -55,7 +55,7 @@ export default function About() {
       </BlurFade>
 
       {/* Main Content Layout */}
-      <div className="mx-auto w-full max-w-[100rem] px-6 md:mt-5 md:px-12 lg:px-20">
+      <div className="mx-auto w-full max-w-[100rem] px-4 md:mt-5 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column: Image with Experience Badge & SOBRE vertical text */}
           <div className="flex justify-start lg:col-span-7">

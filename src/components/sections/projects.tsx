@@ -35,7 +35,7 @@ const projects: Project[] = [
     description:
       "Landing page estratégica desenvolvida para apresentar a plataforma e aumentar a conversão em campanhas de tráfego pago.",
     bullets: [
-      "Design moderno e focado em conversão",
+      "Design focado em conversão",
       "Estrutura otimizada para performance",
       "Seções pensadas para gerar autoridade",
       "Totalmente responsivo e animado",
@@ -255,7 +255,7 @@ export default function Projects() {
       </div>
 
       {/* Cards stack */}
-      <div className="relative mx-auto -mt-16 w-full max-w-[100rem] px-6 max-sm:mt-0 md:-mt-24 md:px-12 lg:px-20">
+      <div className="relative mx-auto mt-16 w-full px-3 max-sm:mt-0 md:-mt-24 md:max-w-[100rem] md:px-12 lg:px-20">
         {projects.map((project, index) => (
           <div
             key={project.id}
@@ -266,9 +266,9 @@ export default function Projects() {
             style={{ zIndex: index + 1 }}
           >
             {/* The main card container */}
-            <div className="project-card-inner bg-card-bg relative flex h-full max-h-[85vh] w-full flex-col overflow-hidden rounded-[32px] border border-white/5 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.8)] md:max-h-[80vh] lg:grid lg:grid-cols-12">
+            <div className="project-card-inner bg-card-bg relative flex h-full max-h-[90vh] w-full flex-col overflow-hidden rounded-[32px] border border-white/5 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.8)] md:max-h-[80vh] lg:grid lg:grid-cols-12">
               {/* Left Column: Image mockup */}
-              <div className="relative h-[20vh] min-h-[220px] w-full overflow-hidden select-none lg:col-span-7 lg:h-full">
+              <div className="relative h-[20vh] min-h-[100px] w-full overflow-hidden select-none lg:col-span-7 lg:h-full">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -280,7 +280,7 @@ export default function Projects() {
               </div>
 
               {/* Right Column: Project details */}
-              <div className="flex w-full flex-col justify-center p-6 text-left max-sm:mt-6 md:p-10 lg:col-span-5 lg:p-12">
+              <div className="flex w-full flex-col justify-center p-6 text-left max-sm:mt-4 md:p-10 lg:col-span-5 lg:p-12">
                 {/* Badge component */}
                 <div>
                   <Badge
