@@ -99,8 +99,8 @@ export default function Services() {
           {/* Section Title */}
           <div className="z-10 flex justify-center max-sm:mb-10">
             <BlurFade inView direction="up" delay={0.1}>
-              <h2 className="font-heading from-site-bg bg-linear-to-t to-white bg-clip-text text-center text-6xl leading-none font-light tracking-wider text-transparent uppercase md:text-8xl lg:text-9xl">
-                SERVICOS
+              <h2 className="font-heading bg-linear-to-t from-transparent from-15% to-white to-80% bg-clip-text text-center text-6xl leading-none font-light tracking-[-1.5%] text-transparent uppercase md:text-8xl lg:text-9xl">
+                SERVIÇOS
               </h2>
             </BlurFade>
           </div>

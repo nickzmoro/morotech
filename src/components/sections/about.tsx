@@ -81,7 +81,7 @@ export default function About() {
                     delay={0.3}
                     className="absolute origin-center -rotate-90 whitespace-nowrap"
                   >
-                    <span className="font-heading from-site-bg bg-linear-to-t to-white bg-clip-text text-8xl leading-none font-light tracking-wider text-transparent uppercase xl:text-9xl">
+                    <span className="font-heading bg-linear-to-t from-transparent from-15% to-white to-80% bg-clip-text text-8xl leading-none font-light tracking-wider text-transparent uppercase xl:text-9xl">
                       SOBRE
                     </span>
                   </BlurFade>
