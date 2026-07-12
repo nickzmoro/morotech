@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import StarIconBlue from "@/assets/icons/star-blue-icon.svg";
 import StarIcon from "@/assets/icons/star-icon.svg";
 
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
@@ -33,11 +34,15 @@ export default function Badge({
             isBlue ? "bg-blue-600/30" : "bg-white/8"
           }`}
         >
-          <Image src={StarIcon} alt="Star" className="h-4 w-4" />
+          <Image
+            src={isBlue ? StarIconBlue : StarIcon}
+            alt="Star"
+            className="h-4 w-4"
+          />
         </div>
         <AnimatedShinyText
           className={`font-heading text-sm font-normal tracking-[-1.5%] ${
-            isBlue ? "text-blue-400 dark:text-blue-400" : "text-white/60"
+            isBlue ? "text-primary dark:text-primary" : "text-white/60"
           }`}
         >
           {text}

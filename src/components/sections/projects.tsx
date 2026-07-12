@@ -262,25 +262,27 @@ export default function Projects() {
             ref={(el) => {
               if (el) cardsRef.current[index] = el;
             }}
-            className="relative sticky top-0 flex h-screen w-full items-center justify-center overflow-visible py-8 md:py-12"
+            className="group relative sticky top-0 flex h-screen w-full items-center justify-center overflow-visible py-8 md:py-12"
             style={{ zIndex: index + 1 }}
           >
             {/* The main card container */}
-            <div className="project-card-inner bg-card-bg relative flex w-full flex-col items-center justify-between overflow-hidden rounded-[32px] border border-white/5 p-8 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.8)] md:p-12 lg:grid lg:grid-cols-12 lg:gap-12 lg:p-14">
+            <div className="project-card-inner bg-card-bg relative flex h-full max-h-[85vh] w-full flex-col overflow-hidden rounded-[32px] border border-white/5 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.8)] md:max-h-[80vh] lg:grid lg:grid-cols-12">
               {/* Left Column: Image mockup */}
-              <div className="relative flex w-full items-center justify-center overflow-hidden select-none lg:col-span-7">
+              <div className="relative h-[20vh] min-h-[220px] w-full overflow-hidden select-none lg:col-span-7 lg:h-full">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  className="h-auto w-full max-w-[450px] object-contain transition-transform duration-500 hover:scale-102 lg:max-w-none"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-102"
                   priority={index === 0}
+                  sizes="(max-width: 1024px) 100vw, 60vw"
                 />
               </div>
 
               {/* Right Column: Project details */}
-              <div className="mt-8 flex w-full flex-col text-left lg:col-span-5 lg:mt-0">
+              <div className="flex w-full flex-col justify-center p-6 text-left max-sm:mt-6 md:p-10 lg:col-span-5 lg:p-12">
                 {/* Badge component */}
-                <div className="mb-6">
+                <div>
                   <Badge
                     text={project.badgeText}
                     variant="blue"
@@ -308,7 +310,7 @@ export default function Projects() {
                         {/* Small glowing dot at the end */}
                         <span className="absolute right-0 h-1.5 w-1.5 rounded-full bg-blue-300 shadow-[0_0_8px_#2563eb]" />
                       </div>
-                      <span className="text-[15px] leading-relaxed font-medium tracking-wide text-white/80">
+                      <span className="text-sm leading-relaxed font-medium tracking-wide text-white/80">
                         {bullet}
                       </span>
                     </li>
@@ -319,7 +321,7 @@ export default function Projects() {
                 <div className="mb-6 h-px w-full bg-white/10" />
 
                 {/* Service & Objective metadata */}
-                <div className="mb-8 grid grid-cols-2 gap-6">
+                <div className="mb-8 grid grid-cols-2 gap-6 max-sm:hidden">
                   <div>
                     <span className="mb-1.5 block text-[11px] font-semibold tracking-widest text-white/40 uppercase">
                       SERVIÇO
