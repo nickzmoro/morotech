@@ -159,6 +159,7 @@ export default function Projects() {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useGSAP(
     () => {
@@ -225,6 +226,17 @@ export default function Projects() {
           );
         }
       });
+
+      // Track visibility of the entire projects section
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom bottom",
+        onEnter: () => setIsVisible(true),
+        onLeave: () => setIsVisible(false),
+        onEnterBack: () => setIsVisible(true),
+        onLeaveBack: () => setIsVisible(false),
+      });
     },
     { scope: containerRef },
   );
@@ -247,7 +259,11 @@ export default function Projects() {
       className="bg-site-bg relative w-full text-white md:mt-20"
     >
       {/* Title block - sticky for desktop, normal flow for mobile */}
-      <div className="pointer-events-none sticky top-12 z-0 flex w-full justify-center pt-16 max-sm:relative max-sm:top-0 max-sm:pt-24 max-sm:pb-8">
+      <div
+        className={`pointer-events-none sticky top-12 z-0 flex w-full justify-center pt-16 transition-opacity duration-500 max-sm:relative max-sm:top-0 max-sm:pt-24 max-sm:pb-8 max-sm:opacity-100 ${
+          isVisible ? "md:opacity-100" : "md:opacity-0"
+        }`}
+      >
         <BlurFade inView direction="up" delay={0.1}>
           <h2 className="font-heading bg-linear-to-t from-transparent from-15% to-white to-80% bg-clip-text text-center text-6xl leading-none font-light tracking-[-1.5%] text-transparent uppercase md:text-8xl lg:text-9xl">
             PROJETOS
@@ -258,7 +274,9 @@ export default function Projects() {
       {/* Side Dots pagination - sticky container */}
       <div
         className={`pointer-events-none absolute inset-y-0 right-6 z-50 flex items-start justify-center transition-opacity duration-300 max-md:hidden md:right-10 lg:right-16 ${
-          activeIndex === 0 ? "pointer-events-none opacity-0" : "opacity-100"
+          isVisible && activeIndex !== 0
+            ? "opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
       >
         <div className="pointer-events-auto sticky top-1/2 flex -translate-y-1/2 flex-col gap-3">

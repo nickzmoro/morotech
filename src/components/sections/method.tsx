@@ -32,8 +32,8 @@ function MethodCard({
       <GlareHover
         width="100%"
         background="rgba(6, 6, 6, 0.5)"
-        color="#2563EB"
-        opacity={0.12}
+        color="#fff"
+        opacity={0.05}
         className="group relative flex h-full w-full flex-col items-start overflow-hidden rounded-[32px] border border-white/10 p-8 text-left backdrop-blur-md transition-all duration-300 hover:border-white/10 md:p-10"
       >
         {/* Subtle glow behind the card on hover */}

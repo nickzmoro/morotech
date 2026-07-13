@@ -41,8 +41,8 @@ function ServiceCard({
       <GlareHover
         width="100%"
         background="#060606"
-        color="#2563EB"
-        opacity={0.12}
+        color="#fff"
+        opacity={0.05}
         className="group relative flex h-full w-full flex-col items-start overflow-hidden rounded-[32px] border border-white/[0.05] p-8 text-left transition-all duration-300 hover:border-white/10 md:p-10"
       >
         {/* Glow behind the button on hover */}
