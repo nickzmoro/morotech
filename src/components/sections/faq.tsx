@@ -63,7 +63,7 @@ export default function Faq() {
       className="relative w-full overflow-hidden bg-[#020202] py-16 text-white md:py-24"
     >
       {/* Figma background glow gradient centered behind accordion */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 z-0 h-[500px] w-full -translate-x-1/2 -translate-y-1/2 bg-[linear-gradient(180deg,rgba(2,2,2,0)_0%,#4267B9_50%,rgba(2,2,2,0)_100%)] blur-[130px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 z-0 h-[500px] w-full -translate-x-1/2 -translate-y-1/2 bg-[linear-gradient(90deg,rgba(2,2,2,0)_0%,#4267B9_50%,rgba(2,2,2,0)_100%)] blur-[130px] md:bg-[linear-gradient(180deg,rgba(2,2,2,0)_0%,#4267B9_50%,rgba(2,2,2,0)_100%)]" />
 
       <div className="relative z-10 mx-auto min-h-[80vh] w-full max-w-[100rem]">
         {/* Title inspired by testimonials.tsx */}
