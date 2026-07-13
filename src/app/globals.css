@@ -169,3 +169,31 @@
     transform: translateY(calc(-100% - var(--gap)));
   }
 }
+
+/* Custom Scrollbar */
+@layer base {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #020202;
+  }
+
+  /* Chrome, Edge, and Safari */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #020202;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 9999px;
+    border: 1px solid #020202;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+  }
+}
