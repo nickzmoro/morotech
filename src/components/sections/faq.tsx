@@ -43,7 +43,7 @@ export default function Faq() {
     {
       question: "Posso acompanhar o andamento do projeto?",
       answer:
-        "Sim, prezamos por total transparência. Você receberá atualizações constantes das etapas concluídas e terá acesso a um link temporário de homologação para visualizar, testar e aprovar o andamento do projeto antes da publicação oficial.",
+        "Sim. Durante todo o desenvolvimento, você acompanha o progresso do projeto, recebe atualizações periódicas e pode validar cada etapa antes da entrega final.",
     },
     {
       question: "É possível integrar com outros sistemas?",
@@ -53,7 +53,7 @@ export default function Faq() {
     {
       question: "O projeto terá suporte após a entrega?",
       answer:
-        "Sim! Após o lançamento, oferecemos um período de suporte gratuito para correção de eventuais bugs ou ajustes técnicos. Também disponibilizamos planos mensais flexíveis de manutenção preventiva, segurança e evolução contínua.",
+        "Sim! Após o lançamento, oferecemos um período de suporte gratuito para correção de eventuais bugs ou ajustes técnicos. Após esse período, haverá uma taxa caso haja necessidade de manutenção ou atualizações.Também disponibilizamos planos mensais flexíveis de manutenção preventiva, segurança e evolução contínua.",
     },
   ];
 
