@@ -75,7 +75,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#servicos"
                   className="font-sans text-base font-medium tracking-wide text-white/70 transition-colors hover:text-white"
                 >
                   Serviços
@@ -83,7 +83,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#projetos"
                   className="font-sans text-base font-medium tracking-wide text-white/70 transition-colors hover:text-white"
                 >
                   Projetos
@@ -91,10 +91,10 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#resultados"
                   className="font-sans text-base font-medium tracking-wide text-white/70 transition-colors hover:text-white"
                 >
-                  Depoimentos
+                  Resultados
                 </a>
               </li>
             </ul>

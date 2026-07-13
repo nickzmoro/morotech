@@ -85,15 +85,15 @@ export default function Testimonials() {
 
   return (
     <section
-      id="depoimentos"
+      id="resultados"
       className="relative mt-15 w-full overflow-hidden bg-[#020202] py-16 text-white md:py-24"
     >
       <div className="mx-auto w-full max-w-[100rem]">
         {/* Section Title */}
         <div className="z-10 mb-16 flex justify-center px-4 md:mb-24 md:px-12 lg:px-20">
           <BlurFade inView direction="up" delay={0.1}>
-            <h2 className="font-heading bg-linear-to-t from-transparent from-15% to-white to-80% bg-clip-text text-center text-6xl leading-none font-light tracking-[-1.5%] text-transparent uppercase md:text-8xl lg:text-9xl">
-              DEPOIMENTOS
+            <h2 className="font-heading bg-linear-to-t from-transparent from-5% to-white to-80% bg-clip-text text-center text-6xl leading-none font-light tracking-[-1.5%] text-transparent uppercase md:text-8xl lg:text-9xl">
+              RESULTADOS
             </h2>
           </BlurFade>
         </div>

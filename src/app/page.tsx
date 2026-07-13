@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/sections/about";
+import FAQ from "@/components/sections/faq";
 import Hero from "@/components/sections/hero";
 import Method from "@/components/sections/method";
 import Projects from "@/components/sections/projects";
@@ -19,6 +20,7 @@ export default function Home() {
       <Method />
       <Projects />
       <Testimonials />
+      <FAQ />
     </>
   );
 }
