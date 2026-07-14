@@ -138,7 +138,7 @@ export default function About() {
                 >
                   <a
                     href={`https://wa.me/5514991459254?text=${encodeURIComponent(
-                      "Olá! Vi o seu site e gostaria de conversar sobre um projeto.",
+                      "Olá! Vi o site de vocês e gostaria de conversar sobre um projeto.",
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
