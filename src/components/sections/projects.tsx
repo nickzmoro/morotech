@@ -303,7 +303,7 @@ export default function Projects() {
             ref={(el) => {
               if (el) cardsRef.current[index] = el;
             }}
-            className="group relative sticky top-0 flex h-screen w-full items-center justify-center overflow-visible py-8 md:py-12"
+            className="group sticky top-0 flex h-screen w-full items-center justify-center overflow-visible py-8 md:py-12"
             style={{ zIndex: index + 1 }}
           >
             {/* The main card container */}

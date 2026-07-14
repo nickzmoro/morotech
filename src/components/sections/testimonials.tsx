@@ -86,7 +86,7 @@ export default function Testimonials() {
   return (
     <section
       id="resultados"
-      className="relative mt-15 w-full overflow-hidden bg-[#020202] py-16 text-white md:py-24"
+      className="bg-site-bg relative mt-15 w-full overflow-hidden py-16 text-white md:py-24"
     >
       <div className="mx-auto w-full max-w-[100rem]">
         {/* Section Title */}
@@ -127,7 +127,7 @@ export default function Testimonials() {
                     background="#060606"
                     color="#fff"
                     opacity={0.05}
-                    className="group relative flex h-full w-full flex-col items-start rounded-[32px] border border-white/10 bg-[#060606] p-8 text-left transition-all duration-300 hover:border-white/15 md:p-10"
+                    className="group bg-card-bg relative flex h-full w-full flex-col items-start rounded-[32px] border border-white/10 p-8 text-left transition-all duration-300 hover:border-white/15 md:p-10"
                   >
                     {/* Glow behind card on hover */}
                     <div className="pointer-events-none absolute -bottom-20 left-0 h-[200px] w-full bg-[radial-gradient(circle_at_bottom,rgba(37,99,235,0.1),transparent_70%)]" />
@@ -135,7 +135,7 @@ export default function Testimonials() {
                     {/* Author Profile Row */}
                     <div className="mt-2 mb-6 flex w-full items-center gap-4">
                       {/* Avatar Circle */}
-                      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/[0.02] md:h-[72px] md:w-[72px]">
+                      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/2 md:h-[72px] md:w-[72px]">
                         <Image
                           src={t.logo}
                           alt={t.author}

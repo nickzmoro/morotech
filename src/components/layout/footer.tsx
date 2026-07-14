@@ -219,7 +219,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="relative w-full max-w-[430px] self-start rounded-[15px] bg-gradient-to-b from-[#2564eb50] via-[#2563EB]/30 to-transparent p-[1px] shadow-[0_4px_30px_rgba(0,0,0,0.5)] md:self-auto">
+          <div className="relative w-full max-w-[430px] self-start rounded-[15px] bg-linear-to-b from-[#2564eb50] via-[#2563EB]/30 to-transparent p-px shadow-[0_4px_30px_rgba(0,0,0,0.5)] md:self-auto">
             <div className="flex w-full items-center justify-between rounded-[15px] bg-[#02091B] px-6 py-3 backdrop-blur-md select-none">
               <span className="pr-4 text-sm font-normal tracking-wide text-white/90">
                 Seu novo site começa aqui.

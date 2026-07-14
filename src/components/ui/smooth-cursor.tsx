@@ -57,6 +57,7 @@ const isBlueTarget = (el: HTMLElement | null): boolean => {
       const b = parseInt(match[3], 10);
       return b > 200 && r < 100 && g < 150;
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     // Ignore error
   }

@@ -3,7 +3,6 @@
 import CenterBottomIllustration from "@public/services-center-bottom.svg";
 import Image from "next/image";
 
-import ArrowIcon from "@/assets/icons/arrow-up-icon.svg";
 import AiIcon from "@/assets/icons/services-ai.svg";
 import LandingIcon from "@/assets/icons/services-landing.svg";
 import SeoIcon from "@/assets/icons/services-seo.svg";
@@ -43,7 +42,7 @@ function ServiceCard({
         background="#060606"
         color="#fff"
         opacity={0.05}
-        className="group relative flex h-full w-full flex-col items-start overflow-hidden rounded-[32px] border border-white/[0.05] p-8 text-left transition-all duration-300 hover:border-white/10 md:p-10"
+        className="group relative flex h-full w-full flex-col items-start overflow-hidden rounded-[32px] border border-white/5 p-8 text-left transition-all duration-300 hover:border-white/10 md:p-10"
       >
         {/* Card Header (Icon & Button) */}
         <div className="mb-8 flex w-full items-start justify-between">

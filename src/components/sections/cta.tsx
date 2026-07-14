@@ -13,7 +13,7 @@ export default function CTA() {
   return (
     <section
       id="orcamento"
-      className="relative flex min-h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-[#020202] py-24 md:py-36"
+      className="bg-site-bg relative flex min-h-[500px] w-full flex-col items-center justify-center overflow-hidden py-24 md:py-36"
     >
       {/* Retro Grid Background */}
       <div className="pointer-events-none absolute inset-0 z-0 select-none">
