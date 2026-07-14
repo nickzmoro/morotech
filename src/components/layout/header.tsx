@@ -24,6 +24,42 @@ export default function Header() {
   ];
 
   useEffect(() => {
+    const sections = [
+      "inicio",
+      "sobre",
+      "servicos",
+      "metodo",
+      "projetos",
+      "resultados",
+      "faq",
+      "orcamento",
+    ];
+
+    const sectionMapping: Record<string, string> = {
+      inicio: "inicio",
+      sobre: "sobre",
+      servicos: "servicos",
+      metodo: "servicos",
+      projetos: "projetos",
+      resultados: "resultados",
+      faq: "resultados",
+      orcamento: "resultados",
+    };
+
+    let cachedSections: Array<{ id: string; top: number; bottom: number }> = [];
+
+    const updateSectionCache = () => {
+      cachedSections = sections
+        .map((id) => {
+          const element = document.getElementById(id);
+          if (!element) return null;
+          const top = element.offsetTop;
+          const bottom = top + element.offsetHeight;
+          return { id, top, bottom };
+        })
+        .filter((item): item is { id: string; top: number; bottom: number } => item !== null);
+    };
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
 
@@ -40,43 +76,13 @@ export default function Header() {
         return;
       }
 
-      const sections = [
-        "inicio",
-        "sobre",
-        "servicos",
-        "metodo",
-        "projetos",
-        "resultados",
-        "faq",
-        "orcamento",
-      ];
-
-      const sectionMapping: Record<string, string> = {
-        inicio: "inicio",
-        sobre: "sobre",
-        servicos: "servicos",
-        metodo: "servicos",
-        projetos: "projetos",
-        resultados: "resultados",
-        faq: "resultados",
-        orcamento: "resultados",
-      };
-
-      let currentSection = "inicio";
       const scrollPosition = window.scrollY + 200;
+      let currentSection = "inicio";
 
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            currentSection = sectionId;
-            break;
-          }
+      for (const section of cachedSections) {
+        if (scrollPosition >= section.top && scrollPosition < section.bottom) {
+          currentSection = section.id;
+          break;
         }
       }
 
@@ -84,9 +90,20 @@ export default function Header() {
       setActiveSection(mappedSection);
     };
 
+    updateSectionCache();
     handleScroll();
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", updateSectionCache);
+
+    // Also update cache after a brief delay to ensure images/layouts are fully loaded
+    const timeoutId = setTimeout(updateSectionCache, 1000);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateSectionCache);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   useEffect(() => {

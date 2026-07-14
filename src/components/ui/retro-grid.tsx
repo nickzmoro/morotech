@@ -426,32 +426,106 @@ function getColorResolveContext() {
 }
 
 function resolveLineColor(color: string, element: HTMLElement) {
-  const resolver = document.createElement("span");
-  resolver.style.color = color;
-  resolver.style.opacity = "0";
-  resolver.style.pointerEvents = "none";
-  resolver.style.position = "absolute";
-  element.appendChild(resolver);
+  // Normalize color string
+  const cleanColor = color.trim().toLowerCase();
 
-  const resolvedColor = getComputedStyle(resolver).color;
-  resolver.remove();
-  const context = getColorResolveContext();
-
-  if (!context) {
-    return new Float32Array([0.5, 0.5, 0.5, 1]);
+  // Try parsing rgba
+  let match = cleanColor.match(
+    /rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d.]+)\s*\)/,
+  );
+  if (match) {
+    return new Float32Array([
+      parseInt(match[1], 10) / 255,
+      parseInt(match[2], 10) / 255,
+      parseInt(match[3], 10) / 255,
+      parseFloat(match[4]),
+    ]);
   }
 
-  context.clearRect(0, 0, 1, 1);
-  context.fillStyle = resolvedColor;
-  context.fillRect(0, 0, 1, 1);
-  const pixel = context.getImageData(0, 0, 1, 1).data;
+  // Try parsing rgb
+  match = cleanColor.match(/rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/);
+  if (match) {
+    return new Float32Array([
+      parseInt(match[1], 10) / 255,
+      parseInt(match[2], 10) / 255,
+      parseInt(match[3], 10) / 255,
+      1.0,
+    ]);
+  }
 
-  return new Float32Array([
-    pixel[0] / 255,
-    pixel[1] / 255,
-    pixel[2] / 255,
-    pixel[3] / 255,
-  ]);
+  // Try parsing hex
+  if (cleanColor.startsWith("#")) {
+    const hex = cleanColor.substring(1);
+    if (hex.length === 3) {
+      const r = parseInt(hex[0] + hex[0], 16) / 255;
+      const g = parseInt(hex[1] + hex[1], 16) / 255;
+      const b = parseInt(hex[2] + hex[2], 16) / 255;
+      return new Float32Array([r, g, b, 1.0]);
+    } else if (hex.length === 4) {
+      const r = parseInt(hex[0] + hex[0], 16) / 255;
+      const g = parseInt(hex[1] + hex[1], 16) / 255;
+      const b = parseInt(hex[2] + hex[2], 16) / 255;
+      const a = parseInt(hex[3] + hex[3], 16) / 255;
+      return new Float32Array([r, g, b, a]);
+    } else if (hex.length === 6) {
+      const r = parseInt(hex.substring(0, 2), 16) / 255;
+      const g = parseInt(hex.substring(2, 4), 16) / 255;
+      const b = parseInt(hex.substring(4, 6), 16) / 255;
+      return new Float32Array([r, g, b, 1.0]);
+    } else if (hex.length === 8) {
+      const r = parseInt(hex.substring(0, 2), 16) / 255;
+      const g = parseInt(hex.substring(2, 4), 16) / 255;
+      const b = parseInt(hex.substring(4, 6), 16) / 255;
+      const a = parseInt(hex.substring(6, 8), 16) / 255;
+      return new Float32Array([r, g, b, a]);
+    }
+  }
+
+  // Common color names
+  if (cleanColor === "gray") {
+    return new Float32Array([0.5, 0.5, 0.5, 1.0]);
+  }
+  if (cleanColor === "white") {
+    return new Float32Array([1.0, 1.0, 1.0, 1.0]);
+  }
+  if (cleanColor === "black") {
+    return new Float32Array([0.0, 0.0, 0.0, 1.0]);
+  }
+  if (cleanColor === "transparent") {
+    return new Float32Array([0.0, 0.0, 0.0, 0.0]);
+  }
+
+  // Fallback to DOM method ONLY if we encounter something custom (e.g. system colors, hsl)
+  try {
+    const resolver = document.createElement("span");
+    resolver.style.color = color;
+    resolver.style.opacity = "0";
+    resolver.style.pointerEvents = "none";
+    resolver.style.position = "absolute";
+    element.appendChild(resolver);
+
+    const resolvedColor = getComputedStyle(resolver).color;
+    resolver.remove();
+    const context = getColorResolveContext();
+
+    if (!context) {
+      return new Float32Array([0.5, 0.5, 0.5, 1]);
+    }
+
+    context.clearRect(0, 0, 1, 1);
+    context.fillStyle = resolvedColor;
+    context.fillRect(0, 0, 1, 1);
+    const pixel = context.getImageData(0, 0, 1, 1).data;
+
+    return new Float32Array([
+      pixel[0] / 255,
+      pixel[1] / 255,
+      pixel[2] / 255,
+      pixel[3] / 255,
+    ]);
+  } catch (e) {
+    return new Float32Array([0.5, 0.5, 0.5, 1]);
+  }
 }
 
 function createFallbackGridStyle(

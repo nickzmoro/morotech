@@ -31,35 +31,28 @@ const isBlueTarget = (el: HTMLElement | null): boolean => {
   if (!el) return false;
   const interactive = el.closest(
     "a, button, [role='button'], input[type='button'], input[type='submit']",
-  );
+  ) as HTMLElement | null;
   if (!interactive) return false;
 
   // Check class names
   const className = interactive.className || "";
-  if (
+  const classMatches =
     className.includes("bg-[#2563EB]") ||
     className.includes("bg-[#2563eb]") ||
     className.includes("bg-blue-") ||
     className.includes("bg-[#001D6E]") ||
-    className.includes("bg-[#2564eb]")
+    className.includes("bg-[#2564eb]");
+
+  if (classMatches) return true;
+
+  // Check inline styles (safe, does not trigger reflow)
+  const inlineBg = interactive.style?.backgroundColor || "";
+  if (
+    inlineBg.includes("rgb(37, 99, 235)") ||
+    inlineBg.includes("#2563eb") ||
+    inlineBg.includes("#2563EB")
   ) {
     return true;
-  }
-
-  // Check computed style
-  try {
-    const style = window.getComputedStyle(interactive);
-    const rgbStr = style.backgroundColor || "";
-    const match = rgbStr.match(/rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/);
-    if (match) {
-      const r = parseInt(match[1], 10);
-      const g = parseInt(match[2], 10);
-      const b = parseInt(match[3], 10);
-      return b > 200 && r < 100 && g < 150;
-    }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e) {
-    // Ignore error
   }
 
   return false;
@@ -157,7 +150,9 @@ export function SmoothCursor({
       ) as HTMLElement | null;
 
       const isInteractive =
-        !!interactiveEl || window.getComputedStyle(target).cursor === "pointer";
+        !!interactiveEl ||
+        target.classList?.contains("cursor-pointer") ||
+        !!target.closest(".cursor-pointer");
 
       setIsHovered(isInteractive);
       setIsHoveringBlue(isInteractive && isBlueTarget(target));
