@@ -111,7 +111,7 @@ export default function Footer() {
       <div className="relative z-5 mx-auto max-w-[100rem] px-4 md:px-12 lg:px-20">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-[460px]">
-            <p className="font-sans text-[15px] leading-[1.7] font-normal tracking-wide text-white/75">
+            <p className="font-sans text-[15px] leading-[1.7] font-normal tracking-wide text-white/85">
               A <strong className="font-semibold text-white">Moro Tech</strong>{" "}
               é uma desenvolvedora de software premium especializada em websites
               de alta performance, aplicações web e experiências digitais
@@ -120,7 +120,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-start md:items-end">
-            <span className="font-heading mb-5 text-[11px] font-medium tracking-[0.18em] text-white/40 uppercase select-none">
+            <span className="font-heading mb-5 text-[11px] font-medium tracking-[0.18em] text-white/60 uppercase select-none">
               Links Rápidos
             </span>
             <div className="flex gap-16 max-sm:flex-row-reverse md:gap-24">
@@ -259,7 +259,7 @@ export default function Footer() {
           <MoroLogoFooter />
         </div>
 
-        <div className="flex flex-col gap-4 pt-8 text-xs font-normal tracking-wider text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 pt-8 text-xs font-normal tracking-wider text-white/85 sm:flex-row sm:items-center sm:justify-between">
           <span>
             <strong>© 2026 Moro Tech.</strong> Todos os direitos reservados.
           </span>

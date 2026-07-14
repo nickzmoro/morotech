@@ -55,7 +55,7 @@ export default function CTA() {
 
         {/* Subtitle / Paragraph */}
         <BlurFade delay={0.6} direction="up" inView>
-          <p className="mt-8 max-w-[650px] font-sans text-[15px] leading-[1.6] font-normal tracking-wide text-white/75 sm:text-base md:text-[16px]">
+          <p className="mt-8 max-w-[650px] font-sans text-[15px] leading-[1.6] font-normal tracking-wide text-white/85 sm:text-base md:text-[16px]">
             Desenvolvemos sistemas exclusivos para o seu negócio,
             <br className="hidden sm:block" /> com tecnologia de ponta, alta
             performance e segurança

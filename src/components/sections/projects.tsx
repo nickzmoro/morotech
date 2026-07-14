@@ -338,7 +338,7 @@ export default function Projects() {
                 </h3>
 
                 {/* Project Description */}
-                <p className="mb-8 font-sans text-base leading-relaxed text-white/75">
+                <p className="mb-8 font-sans text-base leading-relaxed text-white/85">
                   {project.description}
                 </p>
 
@@ -365,7 +365,7 @@ export default function Projects() {
                 {/* Service & Objective metadata */}
                 <div className="mb-8 grid grid-cols-2 gap-6 max-sm:hidden">
                   <div>
-                    <span className="mb-1.5 block text-[11px] font-semibold tracking-widest text-white/40 uppercase">
+                    <span className="mb-1.5 block text-[11px] font-semibold tracking-widest text-white/60 uppercase">
                       SERVIÇO
                     </span>
                     <span className="text-sm font-medium text-white/90">
@@ -373,7 +373,7 @@ export default function Projects() {
                     </span>
                   </div>
                   <div>
-                    <span className="mb-1.5 block text-[11px] font-semibold tracking-widest text-white/40 uppercase">
+                    <span className="mb-1.5 block text-[11px] font-semibold tracking-widest text-white/60 uppercase">
                       OBJETIVO
                     </span>
                     <span className="text-sm font-medium text-white/90">

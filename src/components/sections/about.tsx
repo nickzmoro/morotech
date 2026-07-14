@@ -106,7 +106,7 @@ export default function About() {
 
             {/* Paragraphs */}
             <BlurFade inView direction="up" delay={0.5}>
-              <p className="mb-8 font-sans text-base leading-[1.6] font-normal text-white/75 sm:text-lg">
+              <p className="mb-8 font-sans text-base leading-[1.6] font-normal text-white/85 sm:text-lg">
                 Sou{" "}
                 <strong className="font-semibold text-white">
                   Nicolas Moro
@@ -116,7 +116,7 @@ export default function About() {
             </BlurFade>
 
             <BlurFade inView direction="up" delay={0.6}>
-              <p className="mb-8 font-sans text-base leading-[1.6] font-normal text-white/75 sm:text-lg">
+              <p className="mb-8 font-sans text-base leading-[1.6] font-normal text-white/85 sm:text-lg">
                 A Moro Tech nasceu com um propósito claro:{" "}
                 <strong className="font-semibold text-white">
                   ser o braço direito de quem quer mostrar o que faz na internet

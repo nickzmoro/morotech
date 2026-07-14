@@ -59,7 +59,7 @@ function ServiceCard({
         </h3>
 
         {/* Card Description */}
-        <p className="flex-1 font-sans text-base leading-relaxed text-white/75">
+        <p className="flex-1 font-sans text-base leading-relaxed text-white/85">
           {description}
         </p>
 

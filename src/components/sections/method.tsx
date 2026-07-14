@@ -57,7 +57,7 @@ function MethodCard({
         </h3>
 
         {/* Card Description */}
-        <p className="mb-4 flex-1 font-sans text-base leading-relaxed text-white/75 md:mb-6 md:min-h-[72px]">
+        <p className="mb-4 flex-1 font-sans text-base leading-relaxed text-white/85 md:mb-6 md:min-h-[72px]">
           {description}
         </p>
 
@@ -69,7 +69,7 @@ function MethodCard({
           {items.map((item, index) => (
             <li
               key={index}
-              className="flex items-center gap-2.5 font-sans text-[15px] text-white/75"
+              className="flex items-center gap-2.5 font-sans text-[15px] text-white/85"
             >
               <span className="text-primary text-lg leading-none font-light select-none">
                 →

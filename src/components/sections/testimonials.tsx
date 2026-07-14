@@ -146,9 +146,9 @@ export default function Testimonials() {
                       {/* Author Details */}
                       <div>
                         <div className="flex items-center gap-1.5">
-                          <h4 className="font-heading text-lg leading-tight font-normal text-white md:text-xl">
+                          <h3 className="font-heading text-lg leading-tight font-normal text-white md:text-xl">
                             {t.author}
-                          </h4>
+                          </h3>
                           <VerifiedIcon />
                         </div>
                         <p className="mt-1 font-sans text-sm font-light text-neutral-400 md:text-base">

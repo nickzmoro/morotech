@@ -59,7 +59,7 @@ export default function Hero() {
 
           <TextAnimate
             as="p"
-            className="mt-8 max-w-[500px] font-sans text-base leading-[1.6] font-normal text-white/75 sm:text-lg md:text-[18px]"
+            className="mt-8 max-w-[500px] font-sans text-base leading-[1.6] font-normal text-white/85 sm:text-lg md:text-[18px]"
             animation="blurInUp"
             delay={0.8}
             startOnView
