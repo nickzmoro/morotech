@@ -78,7 +78,7 @@ export default function Hero() {
           </TextAnimate>
 
           {/* CTA Button */}
-          <BlurFade delay={1.2} direction="up">
+          <BlurFade delay={0.3} duration={0.3} offset={4} direction="up">
             <div className="mt-10">
               <GlareHover className="rounded-full">
                 <a
