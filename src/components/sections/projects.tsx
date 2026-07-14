@@ -387,6 +387,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Ver projeto ${project.title}`}
                   className="hover:text-site-bg inline-flex w-fit cursor-pointer items-center gap-2.5 rounded-full border border-white/20 bg-transparent px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-white hover:bg-white"
                 >
                   Ver projeto
