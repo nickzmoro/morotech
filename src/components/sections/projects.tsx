@@ -312,7 +312,7 @@ export default function Projects() {
               <div className="relative h-[20vh] min-h-[100px] w-full overflow-hidden select-none lg:col-span-7 lg:h-full">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`Mockup da interface do projeto ${project.title} - ${project.badgeText}`}
                   fill
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-102"
                   priority={index === 0}

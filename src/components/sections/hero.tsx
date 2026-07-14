@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import WhatsAppIcon from "@/assets/icons/whatsapp-icon.svg";
@@ -37,7 +39,7 @@ export default function Hero() {
       <div className="from-site-bg/85 md:via-site-bg/70 lg:via-site-bg/45 pointer-events-none absolute inset-0 z-0 bg-linear-to-r to-transparent" />
       <div className="from-site-bg md:via-site-bg lg:via-site-bg/50 pointer-events-none absolute bottom-0 left-0 z-0 h-[150px] w-full bg-linear-to-t to-transparent" />
 
-      <main className="relative z-5 flex w-full grow items-center">
+      <section className="relative z-5 flex w-full grow items-center">
         <div className="mx-auto flex w-full max-w-[100rem] flex-col justify-center px-4 pt-24 pb-24 max-sm:pb-12 md:px-12 md:py-28 lg:px-20">
           {/* Badge */}
           <Badge text="Especialista em Websites" />
@@ -102,7 +104,7 @@ export default function Hero() {
             </div>
           </BlurFade>
         </div>
-      </main>
+      </section>
     </>
   );
 }

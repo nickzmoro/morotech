@@ -260,7 +260,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="relative my-10 w-full overflow-hidden select-none md:my-14">
+        <div className="relative my-10 w-full overflow-hidden select-none md:my-14" aria-hidden="true">
           <MoroLogoFooter />
         </div>
 

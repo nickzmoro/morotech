@@ -111,12 +111,15 @@ export default function Testimonials() {
                   className="relative h-full w-[320px] shrink-0 py-6 md:w-[450px]"
                 >
                   {/* Rating Stars Pill */}
-                  <div className="bg-card-bg absolute top-6 left-8 z-20 flex -translate-y-1/2 items-center gap-1 rounded-full border border-white/10 px-5 py-2.5 shadow-[0_4px_12px_rgba(0,0,0,0.5)] select-none">
+                  <div 
+                    className="bg-card-bg absolute top-6 left-8 z-20 flex -translate-y-1/2 items-center gap-1 rounded-full border border-white/10 px-5 py-2.5 shadow-[0_4px_12px_rgba(0,0,0,0.5)] select-none"
+                    aria-label="Avaliação de 5 estrelas"
+                  >
                     {[...Array(5)].map((_, i) => (
                       <Image
                         key={i}
                         src={StarBlueIcon}
-                        alt="Star Rating"
+                        alt=""
                         className="h-4.5 w-4.5"
                       />
                     ))}

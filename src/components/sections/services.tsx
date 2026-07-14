@@ -48,7 +48,7 @@ function ServiceCard({
         <div className="mb-8 flex w-full items-start justify-between">
           <Image
             src={icon}
-            alt="Service Icon"
+            alt={typeof title === "string" ? `Ícone representativo de ${title}` : "Ícone de serviço"}
             className="h-[74px] w-[81px] select-none"
           />
         </div>

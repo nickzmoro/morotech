@@ -1,5 +1,3 @@
-"use client";
-
 import dynamic from "next/dynamic";
 
 import Hero from "@/components/sections/hero";
@@ -16,7 +14,7 @@ const CTA = dynamic(() => import("@/components/sections/cta"));
 
 export default function Home() {
   return (
-    <>
+    <main>
       <div
         id="inicio"
         className="bg-site-bg relative flex min-h-screen flex-col overflow-hidden text-white"
@@ -30,6 +28,6 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <CTA />
-    </>
+    </main>
   );
 }
