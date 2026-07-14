@@ -37,6 +37,8 @@ export const metadata: Metadata = {
     "Next.js",
     "desenvolvedor de software",
     "presença digital premium",
+    "landing page",
+    "loja virtual",
   ],
   authors: [{ name: "Nicolas Moro", url: "https://morotech.digital" }],
   creator: "Moro Tech",
@@ -61,12 +63,8 @@ export const metadata: Metadata = {
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
   manifest: "/manifest.json",
   openGraph: {
@@ -79,10 +77,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/about-image.webp",
+        url: "/share-image.webp",
         width: 1200,
         height: 630,
-        alt: "Nicolas Moro - Moro Tech",
+        alt: "Moro Tech | Tecnologia e Design Digital Sob Medida",
       },
     ],
   },
@@ -91,7 +89,7 @@ export const metadata: Metadata = {
     title: "Moro Tech | Tecnologia e Design Digital Sob Medida",
     description:
       "Sites rápidos, landing pages de alta conversão, e-commerce e sistemas sob medida com inteligência artificial. Design premium exclusivo para sua empresa vender mais.",
-    images: ["/about-image.webp"],
+    images: ["/share-image.webp"],
     creator: "@morotech.br",
   },
 };
