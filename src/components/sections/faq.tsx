@@ -65,7 +65,7 @@ export default function Faq() {
       {/* Figma background glow gradient centered behind accordion */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 z-0 h-[500px] w-full -translate-x-1/2 -translate-y-1/2 bg-[linear-gradient(90deg,rgba(2,2,2,0)_0%,#4267B9_50%,rgba(2,2,2,0)_100%)] blur-[130px] md:bg-[linear-gradient(180deg,rgba(2,2,2,0)_0%,#4267B9_50%,rgba(2,2,2,0)_100%)]" />
 
-      <div className="relative z-10 mx-auto min-h-[80vh] w-full max-w-[100rem]">
+      <div className="relative z-5 mx-auto min-h-[80vh] w-full max-w-[100rem]">
         {/* Title inspired by testimonials.tsx */}
         <div className="mb-16 flex justify-center px-4 md:mb-20 md:px-12 lg:px-20">
           <BlurFade inView direction="up" delay={0.1}>
@@ -76,7 +76,7 @@ export default function Faq() {
         </div>
 
         {/* Accordion List Container */}
-        <div className="mx-auto max-w-[100rem] px-4 md:px-6">
+        <div className="mx-auto max-w-[100rem] px-3 md:px-6">
           <BlurFade inView direction="up" delay={0.2}>
             <Accordion
               defaultValue={["faq-0"]}

@@ -146,7 +146,7 @@ export default function Method() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-[100rem] flex-col justify-center px-4 md:absolute md:inset-0 md:px-12 lg:px-20">
+      <div className="relative z-5 mx-auto flex h-full w-full max-w-[100rem] flex-col justify-center px-4 md:absolute md:inset-0 md:px-12 lg:px-20">
         {/* Section Title overlapping background */}
         <div className="relative z-0 flex justify-center max-sm:mb-6">
           <BlurFade inView direction="up" delay={0.1}>

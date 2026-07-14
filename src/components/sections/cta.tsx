@@ -27,7 +27,7 @@ export default function CTA() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[100rem] flex-col items-center justify-center px-4 text-center">
+      <div className="relative z-5 mx-auto flex w-full max-w-[100rem] flex-col items-center justify-center px-4 text-center">
         {/* Title inspired by Hero */}
         <DiaTextReveal
           as="h2"

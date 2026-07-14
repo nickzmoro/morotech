@@ -195,7 +195,7 @@ export default function Header() {
             {/* Hamburger Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white transition-all duration-300 active:scale-90 md:hidden"
+              className="z-100 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white transition-all duration-300 active:scale-90 md:hidden"
               aria-label="Toggle menu"
             >
               <div className="relative h-5 w-5">

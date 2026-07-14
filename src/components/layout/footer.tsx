@@ -108,7 +108,7 @@ export default function Footer() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-[100rem] px-6 md:px-12 lg:px-20">
+      <div className="relative z-5 mx-auto max-w-[100rem] px-4 md:px-12 lg:px-20">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-[460px]">
             <p className="font-sans text-[15px] leading-[1.7] font-normal tracking-wide text-white/75">
