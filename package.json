@@ -43,12 +43,5 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "typescript-eslint": "^8.63.0"
-  },
-  "browserslist": [
-    "last 2 Chrome versions",
-    "last 2 Firefox versions",
-    "last 2 Edge versions",
-    "last 2 Safari versions",
-    "not dead"
-  ]
+  }
 }
