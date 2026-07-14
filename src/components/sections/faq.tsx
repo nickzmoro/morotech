@@ -78,10 +78,7 @@ export default function Faq() {
         {/* Accordion List Container */}
         <div className="mx-auto max-w-[100rem] px-3 md:px-6">
           <BlurFade inView direction="up" delay={0.2}>
-            <Accordion
-              defaultValue={["faq-0"]}
-              className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6"
-            >
+            <Accordion className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
               {/* Left Column (Items 1-4) */}
               <div className="flex flex-col gap-4">
                 {faqItems.slice(0, 4).map((item, index) => (

@@ -45,9 +45,6 @@ function ServiceCard({
         opacity={0.05}
         className="group relative flex h-full w-full flex-col items-start overflow-hidden rounded-[32px] border border-white/[0.05] p-8 text-left transition-all duration-300 hover:border-white/10 md:p-10"
       >
-        {/* Glow behind the button on hover */}
-        <div className="pointer-events-none absolute top-0 right-0 h-[220px] w-[220px] bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
         {/* Card Header (Icon & Button) */}
         <div className="mb-8 flex w-full items-start justify-between">
           <Image
@@ -69,15 +66,6 @@ function ServiceCard({
 
         {/* Bottom Line */}
         <div className="via-site-bg from-primary mt-6 h-[2px] w-30 rounded-full bg-linear-to-r to-transparent" />
-
-        {/* Hover Button */}
-        <div className="bg-primary absolute top-0 right-0 flex h-16 w-16 scale-90 items-center justify-center rounded-bl-3xl opacity-0 shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 max-sm:scale-100 max-sm:opacity-100">
-          <Image
-            src={ArrowIcon}
-            alt="Arrow"
-            className="h-12 w-12 text-white brightness-0 invert"
-          />
-        </div>
       </GlareHover>
     </BlurFade>
   );
