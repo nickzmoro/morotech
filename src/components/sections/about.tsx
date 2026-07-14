@@ -70,7 +70,8 @@ export default function About() {
                   src={AboutImage}
                   alt="Nicolas Moro"
                   placeholder="blur"
-                  sizes="(max-width: 768px) 100vw, 500px"
+                  sizes="(max-width: 640px) 360px, (max-width: 768px) 450px, 500px"
+                  quality={70}
                   className="h-auto w-full rounded-[32px] object-contain select-none"
                   priority
                 />

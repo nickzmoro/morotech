@@ -18,8 +18,9 @@ export default function Hero() {
           alt="Hero Background"
           fill
           priority
+          quality={70}
           className="object-cover object-right select-none"
-          sizes="100vw"
+          sizes="(max-width: 1024px) 100vw, 80vw"
         />
       </div>
       <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full sm:hidden">
@@ -28,8 +29,9 @@ export default function Hero() {
           alt="Hero Background Mobile"
           fill
           priority
+          quality={70}
           className="object-cover object-right select-none"
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, 640px"
         />
       </div>
       <div className="from-site-bg/85 md:via-site-bg/70 lg:via-site-bg/45 pointer-events-none absolute inset-0 z-0 bg-linear-to-r to-transparent" />
