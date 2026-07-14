@@ -215,3 +215,13 @@
     background: #1d4ed8;
   }
 }
+
+/* Smooth Cursor Support */
+@media (any-hover: hover) and (any-pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+  input, textarea, select {
+    cursor: text !important;
+  }
+}

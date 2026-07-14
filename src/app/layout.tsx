@@ -3,8 +3,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
+import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 import FloatingWhatsApp from "@/components/ui/floating-whatsapp";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { cn } from "@/lib/utils";
 
 const manrope = Manrope({
@@ -29,10 +31,15 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", "dark", manrope.variable)}
     >
       <body className="bg-site-bg flex min-h-full flex-col text-white selection:bg-[#2563EB] selection:text-white">
+        <SmoothCursor />
+
         {/* Header / Navigation Bar */}
         <Header />
 
         {children}
+
+        {/* Footer */}
+        <Footer />
 
         {/* WhatsApp Icon */}
         <FloatingWhatsApp message="Olá! Vi o site de vocês e gostaria de conversar sobre um projeto." />
