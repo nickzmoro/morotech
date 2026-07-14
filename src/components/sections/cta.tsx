@@ -25,8 +25,6 @@ export default function CTA() {
           lightLineColor="rgba(255, 255, 255, 0.08)"
           className="absolute inset-0"
         />
-        {/* Gradient overlay to fade the grid towards the top (horizon) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020202] via-[#020202]/60 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[100rem] flex-col items-center justify-center px-4 text-center">
@@ -59,10 +57,9 @@ export default function CTA() {
         <BlurFade delay={0.6} direction="up" inView>
           <p className="mt-8 max-w-[650px] font-sans text-[15px] leading-[1.6] font-normal tracking-wide text-white/75 sm:text-base md:text-[16px]">
             Desenvolvemos sistemas exclusivos para o seu negócio,
-            <br className="hidden sm:block" />
-            com tecnologia de ponta , alta performance e segurança
-            <br className="hidden sm:block" />
-            para você{" "}
+            <br className="hidden sm:block" /> com tecnologia de ponta, alta
+            performance e segurança
+            <br className="hidden sm:block" /> para você{" "}
             <strong className="font-bold text-white">
               escalar sem limites.
             </strong>
