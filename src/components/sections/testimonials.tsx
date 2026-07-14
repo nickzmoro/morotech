@@ -113,6 +113,7 @@ export default function Testimonials() {
                   {/* Rating Stars Pill */}
                   <div 
                     className="bg-card-bg absolute top-6 left-8 z-20 flex -translate-y-1/2 items-center gap-1 rounded-full border border-white/10 px-5 py-2.5 shadow-[0_4px_12px_rgba(0,0,0,0.5)] select-none"
+                    role="img"
                     aria-label="Avaliação de 5 estrelas"
                   >
                     {[...Array(5)].map((_, i) => (
