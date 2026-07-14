@@ -12,18 +12,26 @@ export default function Hero() {
   return (
     <>
       {/* Hero Background */}
-      <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full bg-cover bg-right bg-no-repeat max-sm:hidden md:bg-right"
-        style={{
-          backgroundImage: "url('/hero-background.webp')",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full bg-cover bg-right bg-no-repeat sm:hidden md:bg-right"
-        style={{
-          backgroundImage: "url('/hero-background-mobile.webp')",
-        }}
-      />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full max-sm:hidden">
+        <Image
+          src="/hero-background.webp"
+          alt="Hero Background"
+          fill
+          priority
+          className="object-cover object-right select-none"
+          sizes="100vw"
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full sm:hidden">
+        <Image
+          src="/hero-background-mobile.webp"
+          alt="Hero Background Mobile"
+          fill
+          priority
+          className="object-cover object-right select-none"
+          sizes="100vw"
+        />
+      </div>
       <div className="from-site-bg/85 md:via-site-bg/70 lg:via-site-bg/45 pointer-events-none absolute inset-0 z-0 bg-linear-to-r to-transparent" />
       <div className="from-site-bg md:via-site-bg lg:via-site-bg/50 pointer-events-none absolute bottom-0 left-0 z-0 h-[150px] w-full bg-linear-to-t to-transparent" />
 

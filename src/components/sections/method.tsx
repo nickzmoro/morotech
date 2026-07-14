@@ -132,19 +132,25 @@ export default function Method() {
       className="bg-site-bg relative min-h-screen w-full overflow-hidden py-24 text-white md:py-32"
     >
       {/* Background image overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full bg-cover bg-center bg-no-repeat max-sm:hidden md:bg-size-[100%_100%]"
-        style={{
-          backgroundImage: "url('/method-background.webp')",
-        }}
-      />
+      <div className="pointer-events-none absolute inset-0 z-0 h-full w-full max-sm:hidden">
+        <Image
+          src="/method-background.webp"
+          alt="Method Background"
+          fill
+          className="object-cover object-center select-none"
+          sizes="100vw"
+        />
+      </div>
 
-      <div
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full bg-cover bg-center bg-no-repeat max-sm:block md:hidden"
-        style={{
-          backgroundImage: "url('/method-background-mobile.webp')",
-        }}
-      />
+      <div className="pointer-events-none absolute inset-0 z-0 h-full w-full max-sm:block md:hidden">
+        <Image
+          src="/method-background-mobile.webp"
+          alt="Method Background Mobile"
+          fill
+          className="object-cover object-center select-none"
+          sizes="100vw"
+        />
+      </div>
 
       <div className="relative z-5 mx-auto flex h-full w-full max-w-[100rem] flex-col justify-center px-4 md:absolute md:inset-0 md:px-12 lg:px-20">
         {/* Section Title overlapping background */}

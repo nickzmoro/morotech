@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 const InstagramIcon = () => (
@@ -102,11 +103,15 @@ export default function Footer() {
 
   return (
     <footer className="bg-site-bg relative w-full overflow-hidden border-t border-t-white/5 pt-24 pb-12 text-white">
-      <div
-        className="pointer-events-none absolute inset-0 z-0 bg-cover bg-bottom bg-no-repeat select-none"
-        style={{ backgroundImage: "url('/footer-background.webp')" }}
-        aria-hidden="true"
-      />
+      <div className="pointer-events-none absolute inset-0 z-0 select-none" aria-hidden="true">
+        <Image
+          src="/footer-background.webp"
+          alt="Footer Background"
+          fill
+          className="object-cover object-bottom"
+          sizes="100vw"
+        />
+      </div>
 
       <div className="relative z-5 mx-auto max-w-[100rem] px-4 md:px-12 lg:px-20">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
