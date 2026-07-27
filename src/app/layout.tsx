@@ -63,8 +63,25 @@ export const metadata: Metadata = {
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    icon: [
+      {
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
   },
   manifest: "/manifest.json",
   openGraph: {

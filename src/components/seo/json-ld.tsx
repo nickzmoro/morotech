@@ -1,6 +1,15 @@
 import React from "react";
 
 export default function JsonLd() {
+  const imageObjectSchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "@id": "https://morotech.digital/#logo",
+    contentUrl: "https://morotech.digital/logo-google.png",
+    url: "https://morotech.digital/logo-google.png",
+    caption: "Logo da Moro Tech",
+  };
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -8,11 +17,23 @@ export default function JsonLd() {
     name: "Moro Tech",
     alternateName: "MoroTech",
     url: "https://morotech.digital",
-    logo: "https://morotech.digital/logo.svg",
+    logo: {
+      "@id": "https://morotech.digital/#logo",
+    },
     image: "https://morotech.digital/share-image.webp",
     description:
       "A Moro Tech é uma desenvolvedora de software premium especializada em websites de alta performance, landing pages de alta conversão, e-commerce e sistemas sob medida com IA.",
-    sameAs: ["https://instagram.com/morotech.br"],
+    sameAs: [
+      "https://www.instagram.com/morotech.br",
+      "https://www.linkedin.com/in/devnicolas/",
+      "https://github.com/nickzmoro",
+      "https://wa.me/5514991459254",
+    ],
+    brand: {
+      "@type": "Brand",
+      name: "Moro Tech",
+      logo: "https://morotech.digital/logo-google.png",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+55-14-99145-9254",
@@ -34,6 +55,49 @@ export default function JsonLd() {
       "@id": "https://morotech.digital/#organization",
     },
     inLanguage: "pt-BR",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://morotech.digital/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://morotech.digital/",
+    url: "https://morotech.digital/",
+    name: "Moro Tech",
+    description: "Tecnologia e Design Digital Sob Medida.",
+  };
+
+  const breadcrumbListSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://morotech.digital",
+      },
+    ],
+  };
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Moro Tech",
+    image: "https://morotech.digital/logo-google.png",
+    telephone: "+55-14-99145-9254",
+    url: "https://morotech.digital",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Bauru",
+      addressRegion: "SP",
+      addressCountry: "BR",
+    },
   };
 
   const servicesSchema = {
@@ -166,11 +230,31 @@ export default function JsonLd() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageObjectSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbListSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(professionalServiceSchema),
+        }}
       />
       <script
         type="application/ld+json"
