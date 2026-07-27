@@ -9,6 +9,7 @@ import { useRef, useState } from "react";
 import DolcciBImage from "@/assets/projects/dolcci-b.webp";
 import GLineImage from "@/assets/projects/g-line.webp";
 import HdInoxImage from "@/assets/projects/hd-inox.webp";
+import IvanBenevidesImage from "@/assets/projects/ivan.webp";
 import MaqSoftImage from "@/assets/projects/maq-soft.webp";
 import MarkvoraImage from "@/assets/projects/markvora.webp";
 import N2CommerceImage from "@/assets/projects/n2commerce.webp";
@@ -152,6 +153,24 @@ const projects: Project[] = [
     objective: "Centralizar vendas via WhatsApp",
     image: DolcciBImage,
     link: "https://dolccib.netlify.app/",
+  },
+  {
+    id: "ivan-benevides",
+    badgeText: "Link Bio",
+    title: "Ivan Benevides",
+    description:
+      "Link Bio desenvolvido para apresentar o curso Do Físico ao Digital, centralizar os principais canais de contato e fortalecer a autoridade da marca no ambiente digital.",
+    bullets: [
+      "Estratégia focada em conversão",
+      "Navegação rápida e intuitiva",
+      "Experiência otimizada para dispositivos móveis",
+      "Design personalizado e cheio de animações",
+    ],
+    service: "Link Bio Personalizado",
+    objective:
+      "Converter visitantes em alunos e centralizar os canais de contato.",
+    image: IvanBenevidesImage,
+    link: "https://dofisicoaodigital.vercel.app/",
   },
 ];
 
